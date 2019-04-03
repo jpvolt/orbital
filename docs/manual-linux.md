@@ -2,8 +2,9 @@
 
 ## Building
 
-1. Install the following dependencies (if using apt on Ubuntu):
+1. Install the following dependencies (if using apt on Ubuntu or pacman on Arch):
     ```
+    #Ubuntu
     # Common dependencies
     sudo apt -qq install \
         git python
@@ -16,6 +17,20 @@
     sudo apt -qq install \
         zlib1g-dev libglib2.0-dev libfdt-dev libpixman-1-dev libsdl2-dev \
         libvulkan-dev libzip-dev
+        
+    #Arch
+    # Common dependencies
+    sudo apt -qq install \
+        git python
+
+    # Dependencies for orbital-grub
+    pikaur -S  \
+        dh-autoreconf bison flex
+
+    # Dependencies for orbital-qemu
+    sudo pacman -S \
+        lib32-zlib dtc pixman sdl2 \
+        vulkan-devel 
     ```
     - Note: Make sure you install *libzip-dev* v1.3.1 or later!
 
