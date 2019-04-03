@@ -20,7 +20,7 @@
         
     #Arch
     # Common dependencies
-    sudo apt -qq install \
+    sudo pacman -S \
         git python
 
     # Dependencies for orbital-grub
